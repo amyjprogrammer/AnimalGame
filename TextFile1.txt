@@ -1,0 +1,43 @@
+- Play with static classes, inheritance and interfaces
+- have player fight a random animal as another animal
+
+1. Animal.Core - Class Library
+	a. Animals - Folder
+		1. Animal class- abstract
+			a. Health- int
+			b. IsAlive bool (check if they still have health)
+			c. Attack(Character opponent) - AttackResult
+				i. should the standard attack be 10?
+			d. Eat(I)
+		2. Player class inherits from Animal
+			a. int X (setting where the player is on the board)
+			b. int Y
+		3. Mammal class - abstract : Inherit from Animal, IEdible
+			a. Name - string
+			b. Eat(IEdible edible)- method
+
+	b. AttackResult class
+		1. Attacker- Animal
+		2. Opponent - Animal
+		3. Damage - int
+
+	c. GameArena class
+		1. 
+
+
+2. Interfaces - Class Library
+	a. IAdorable- interface (koala, kitten)
+		1. Stun - string
+		2. RoundsStunned - int (use percentage for 1-3 rounds random)
+	b. IPoisonous - interface (Spider, Snake)
+		1. Poison- string
+		2. IsDeadly bool- use percentage for 50% shot for dead from one bite
+			a. if not deadly- 20 damage
+	c. IReach - interface (Elephant, Octopus)
+		1. Reach - string
+		2. InRange bool
+	d. IEdible - interface
+		1. Health - int
+
+3. Utils - Class Library
+	a. Random Percentage
