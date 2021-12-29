@@ -33,6 +33,10 @@
 	c. GameArena class
 		1. 
 
+	d. Items Folder
+		a. Item class abstract //maybe grass for eating and potion to stop either adorable or poison
+			
+
 
 2. Interfaces - Class Library
 	a. IAdorable- interface (koala, kitten)

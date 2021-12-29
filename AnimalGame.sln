@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup Plan", "Setup Plan", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animal.Core", "Animal.Core\Animal.Core.csproj", "{6317275A-9286-4AD7-8D6C-F7692AEB58DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{65D5AFF9-668E-46E1-8EA4-231D6F47530B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces.Game", "Interfaces\Interfaces.Game.csproj", "{65D5AFF9-668E-46E1-8EA4-231D6F47530B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{F3B0155B-3E53-4206-AF62-99C2CDED15B9}"
 EndProject
