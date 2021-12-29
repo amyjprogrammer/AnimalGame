@@ -15,6 +15,15 @@
 		3. Mammal class - abstract : Inherit from Animal, IEdible
 			a. Name - string
 			b. Eat(IEdible edible)- method
+		4. Koala class : Inherit from Mammal, IAdorable
+			a. adjust attack to only 5 damage
+		5. Elephant class : Inherit from Mammal, IReach
+			a. adjust attack to 20
+			
+		6. Insect Class - abstract : Inherit from Animal
+			a. Name - string
+		7. Spider Class : Inherit from Insect, IPoisonous, IElusive
+		8. Bee Class : Inherit from Insect, IElusive (only hit 1 out of 4 times)
 
 	b. AttackResult class
 		1. Attacker- Animal
@@ -29,6 +38,7 @@
 	a. IAdorable- interface (koala, kitten)
 		1. Stun - string
 		2. RoundsStunned - int (use percentage for 1-3 rounds random)
+		3. could use void Stunning();  //allows each class to set up what it needs
 	b. IPoisonous - interface (Spider, Snake)
 		1. Poison- string
 		2. IsDeadly bool- use percentage for 50% shot for dead from one bite
@@ -38,6 +48,8 @@
 		2. InRange bool
 	d. IEdible - interface
 		1. Health - int
+	e. IElusive - interface
+		1. IsDodging bool - another one to use percentage
 
 3. Utils - Class Library
 	a. Random Percentage
