@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Interfaces.Game
 {
-    public interface IPoisonous
+    public interface IElusive
     {
-        bool IsDeadly(int percent);
+        bool Dodging(int percent);
     }
 }

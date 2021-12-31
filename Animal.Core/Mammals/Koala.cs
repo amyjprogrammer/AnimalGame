@@ -6,7 +6,7 @@ using Utils;
 
 namespace Animal.Core.Mammals
 {
-    class Koala : Mammal, IAdorable
+    public class Koala : Mammal, IAdorable
     {
         public Koala(int health, string name) : base(30, "Koala")
         {
@@ -17,5 +17,11 @@ namespace Animal.Core.Mammals
             var stunned = RandomUtils.Percentage(3);
             Console.WriteLine($"Opponent stunned for {stunned}");
         }
+
+        public override AttackResult Attact(Animal opponent, int damage = 5)
+        {
+            return base.Attact(opponent, damage);
+        }
+
     }
 }

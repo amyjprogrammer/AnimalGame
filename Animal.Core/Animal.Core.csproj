@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Insects\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Interfaces\Interfaces.Game.csproj" />
     <ProjectReference Include="..\Utils\Utils.csproj" />
   </ItemGroup>

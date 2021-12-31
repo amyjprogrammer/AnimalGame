@@ -16,11 +16,9 @@ namespace Animal.Core
         public virtual int Health { get; set; }
         public bool IsAlive { get { return Health > 0; } }
 
-        public virtual AttackResult Attact(Animal opponent) 
+        public virtual AttackResult Attact(Animal opponent, int damage) 
         {
-            int damage = 10; 
             opponent.Health -= damage;
-
             return new AttackResult(this, opponent, damage);
         }
 
