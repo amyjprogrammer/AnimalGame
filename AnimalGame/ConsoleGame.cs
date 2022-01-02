@@ -17,6 +17,13 @@ namespace AnimalGame
         {
             CreatePlayer();
             CreateGameWorld();
+
+            do
+            {
+                Console.Clear();
+                DisplayGameWorld();
+
+            } while (player.IsAlive);
         }
 
         private void CreatePlayer()
@@ -27,6 +34,9 @@ namespace AnimalGame
         private void CreateGameWorld()
         {
             arena = new Arena[10, 10];
+            int x = 5;
+            int y = 5;
+            arena[x, y] = new Arena();
 
             int percentage = RandomUtils.Percentage(4);
             if (percentage == 1)
@@ -39,6 +49,30 @@ namespace AnimalGame
                 arena[5, 5].Mammal = new Elephant();
         }
 
-
+        private void DisplayGameWorld()
+        {
+            for (int y = 0; y < arena.GetLength(1); y++)
+            {
+                for (int x = 0; x < arena.GetLength(0); x++)
+                {
+                    Arena room = arena[x, y];
+                    if (player.X == x && player.Y == y)
+                        Console.Write("P");
+                    else if (x == 0 || y == 0 || x == 10 || y ==10)
+                        Console.Write("-");
+                    /*else if (room.Insect != null)
+                        Console.Write("I");
+                    //else if (room.Insect.Name == "Spider")
+                    //    Console.Write("S");
+                    else if (room.Mammal != null)
+                        Console.Write("M");
+                    //else if (room.Insect.Name == "Elephant")
+                    //    Console.Write("E");
+                    else
+                        Console.Write(" ");*/
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
