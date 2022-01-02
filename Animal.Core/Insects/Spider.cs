@@ -8,7 +8,7 @@ namespace Animal.Core.Insects
 {
     public class Spider : Insect, IPoisonous
     {
-        public Spider(int health, string name) : base(5, "Spider")
+        public Spider() : base(5, "Spider")
         {
         }
 

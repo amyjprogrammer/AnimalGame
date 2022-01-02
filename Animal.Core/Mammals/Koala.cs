@@ -8,7 +8,7 @@ namespace Animal.Core.Mammals
 {
     public class Koala : Mammal, IAdorable
     {
-        public Koala(int health, string name) : base(30, "Koala")
+        public Koala() : base(30, "Koala")
         {
         }
 

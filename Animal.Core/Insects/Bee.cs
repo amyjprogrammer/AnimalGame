@@ -6,7 +6,7 @@ namespace Animal.Core.Insects
 {
     public class Bee : Insect
     {
-        public Bee(int health, string name) : base(10, "Bee")
+        public Bee() : base(10, "Bee")
         {
         }
 

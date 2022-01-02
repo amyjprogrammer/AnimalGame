@@ -7,7 +7,7 @@ namespace Animal.Core.Mammals
 {
     public class Elephant : Mammal, IReach
     {
-        public Elephant(int health, string name) : base(50, "Elephant")
+        public Elephant() : base(50, "Elephant")
         {
         }
 
