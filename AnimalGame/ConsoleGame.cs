@@ -12,17 +12,20 @@ namespace AnimalGame
     {
         Player player;
         Arena[,] arena;
+        Insect opponent;
+        Mammal mammal;
 
         public void Play()
         {
             CreatePlayer();
             CreateGameWorld();
+            CreateOpponent();
 
             do
             {
                 Console.Clear();
                 DisplayGameWorld();
-
+                Console.ReadKey();
             } while (player.IsAlive);
         }
 
@@ -31,22 +34,22 @@ namespace AnimalGame
             player = new Player(1, 1, 30);
         }
 
+        private void CreateOpponent()
+        {
+            int percentage = RandomUtils.Percentage(4);
+            if (percentage == 1)
+                opponent = new Bee();
+            else if (percentage == 2)
+                opponent = new Spider();
+            else if (percentage == 3)
+                mammal = new Koala();
+            else
+                mammal = new Elephant();
+        }
+
         private void CreateGameWorld()
         {
             arena = new Arena[10, 10];
-            int x = 5;
-            int y = 5;
-            arena[x, y] = new Arena();
-
-            int percentage = RandomUtils.Percentage(4);
-            if (percentage == 1)
-                arena[5, 5].Insect = new Bee();
-            else if (percentage == 2)
-                arena[5, 5].Insect = new Spider();
-            else if (percentage == 3)
-                arena[5, 5].Mammal = new Koala();
-            else
-                arena[5, 5].Mammal = new Elephant();
         }
 
         private void DisplayGameWorld()
@@ -58,18 +61,15 @@ namespace AnimalGame
                     Arena room = arena[x, y];
                     if (player.X == x && player.Y == y)
                         Console.Write("P");
-                    else if (x == 0 || y == 0 || x == 10 || y ==10)
+                    else if (x == 0 || y == 0 /*|| x == 9*/ || y == 9)
                         Console.Write("-");
-                    /*else if (room.Insect != null)
-                        Console.Write("I");
-                    //else if (room.Insect.Name == "Spider")
-                    //    Console.Write("S");
-                    else if (room.Mammal != null)
-                        Console.Write("M");
-                    //else if (room.Insect.Name == "Elephant")
-                    //    Console.Write("E");
-                    else
-                        Console.Write(" ");*/
+                    else if (x == 5 && y == 5)
+                    {
+                        if (opponent.Name != null)
+                            Console.WriteLine("I");
+                        else
+                            Console.WriteLine("M");
+                    }
                 }
                 Console.WriteLine();
             }
